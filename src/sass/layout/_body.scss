@@ -1,0 +1,275 @@
+.main {
+  margin-left: 215px;
+  font-size: 28px;
+}
+
+.heroArea {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &__image {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+
+    .gatsby-image-wrapper {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    padding-left: 7%;
+    padding-right: 7%;
+    margin-left: 100px;
+    color: #fff;
+    max-width: 670px;
+
+    h1 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 72px;
+      line-height: initial;
+      margin-bottom: 50px;
+    }
+
+    p {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+}
+
+.content-section {
+  padding: 115px 10%;
+
+  &#work {
+    .btn:last-child {
+      margin-top: 100px;
+    }
+  }
+
+  &.error {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  h1 {
+    color: #333c4e;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 110px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+
+  h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 45px;
+    letter-spacing: 2px;
+  }
+
+  h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    color: #333c4e;
+  }
+
+  h5 {
+    letter-spacing: 1px;
+    font-style: normal;
+    font-family: Montserrat;
+    font-weight: 700;
+    color: #333c4e;
+    font-size: 15px;
+  }
+
+  p {
+    margin-bottom: 1.25em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    font-style: normal;
+    color: #7e8890;
+    line-height: 37px;
+  }
+
+  &--white {
+    background-color: #fff;
+
+    h2 {
+      color: #f2f2f2;
+    }
+
+    h3 {
+      color: #333c4e;
+    }
+  }
+
+  &--grey {
+    background-color: #f2f2f2;
+
+    h2 {
+      color: #fff;
+    }
+
+    h3 {
+      color: #333c4e;
+    }
+  }
+
+  &--dark {
+    background-color: #1c212a;
+
+    h2 {
+      color: rgb(40, 47, 60);
+    }
+
+    h3 {
+      color: #fff;
+    }
+  }
+
+  .service-list__box {
+    h5 {
+      color: #fff;
+    }
+    .separator {
+      height: 2px;
+      width: 100px;
+      background: #f4ad24;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  &.single-portfolio {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr minmax(auto, 34%);
+      gap: 30px;
+      width: auto;
+
+      img {
+        width: 100%;
+        object-fit: contain !important;
+      }
+
+      .portfolio-content {
+        p {
+          font-size: 14px;
+          color: #7e8890;
+          font-family: "Lato", sans-serif;
+          font-weight: 400;
+          line-height: 30px;
+        }
+
+        &__description {
+          margin-bottom: 50px;
+        }
+
+        &__details {
+          span {
+            color: #00bea3;
+            font-weight: normal;
+          }
+
+          &.box {
+            border-bottom: 1px solid #f4ad24;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    margin-left: 0px;
+  }
+
+  .heroArea {
+    &__text {
+      @include sidePadding;
+      margin-left: 0px;
+      h1 {
+        font-size: 23px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .content-section {
+    @include sidePadding;
+
+    &.portfolio-section {
+      @include padding;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 31px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    h4 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    &.single-portfolio {
+      @include padding;
+      .container {
+        grid-template-columns: 1fr;
+
+        .portfolio-content {
+          &__description {
+            h4 {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

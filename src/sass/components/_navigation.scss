@@ -1,0 +1,127 @@
+.sideNavigation {
+  height: 100%;
+  width: 215px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #232a34;
+  overflow-x: hidden;
+  border-right: 1px solid #4b4c4d;
+
+  .logo {
+    background: #2b333e;
+    padding: 50px 40px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  #mainMenu {
+    li {
+      padding-left: 40px;
+      padding-right: 40px;
+      min-height: 105px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom-color: #303947;
+      border-bottom-width: 1px;
+      border-style: solid;
+      flex-direction: column;
+
+      a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 0px;
+        font-style: normal;
+        color: #505865;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include transition;
+
+        svg {
+          font-size: 33px;
+          padding-bottom: 20px;
+        }
+
+        &.nav-active {
+          color: #00bea3;
+        }
+
+        &:hover {
+          color: #00bea3;
+        }
+      }
+    }
+  }
+}
+
+.mobileNavigation {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .sideNavigation {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .main {
+    margin: 0px;
+  }
+
+  .mobileNavigation {
+    height: auto;
+    width: auto !important;
+    margin: 0 !important;
+    background-color: rgb(35, 42, 52);
+    display: block;
+
+    .mobileNavigation-items {
+      display: flex;
+      padding: 20px !important;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 100px;
+      }
+
+      svg {
+        font-size: 30px;
+        color: #00bea3;
+      }
+    }
+    #mainMenu {
+      display: none;
+      @include transition;
+
+      li {
+        padding: 10px 30px;
+        border-color: rgba(80, 88, 101, 0.2);
+        border-bottom-width: 1px;
+        border-style: solid;
+        padding: 15px 30px;
+
+        a {
+          text-decoration: none;
+          color: #00bea3;
+          font-size: 17px;
+          font-family: "Montserrat", sans-serif;
+          svg {
+            display: none;
+          }
+        }
+      }
+
+      &.activeMobileMenu {
+        display: block;
+      }
+    }
+  }
+}

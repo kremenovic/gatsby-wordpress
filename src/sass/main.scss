@@ -1,0 +1,27 @@
+@import "./abstracts/mixins";
+
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/animations";
+
+@import "./components/navigation";
+@import "./components/button";
+@import "./components/featuredPortfolio";
+@import "./components/slider";
+
+@import "./layout/body";
+@import "./layout/footer";
+
+:root {
+  // primary
+  --brightBlue: hsl(220, 98%, 61%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body a {
+  color: #00bea3;
+  text-decoration: none;
+}
