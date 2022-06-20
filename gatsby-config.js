@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Stefan Kremenovic`,
-    description: `Hi, my name is Stefan Kremenović from Banja Luka, Republic of Srpska / Bosnia and Herzegovina. My profession is Web Design and SEO.`,
+    title: `MyTechWorld`,
+    description: `MyTechWorld is a sample website of a free Gatsby WordPress theme.`,
     author: `Stefan Kremenovic`,
     siteUrl: `https://kremenovic.com/`,
     image: `${__dirname}/src/images/sharing-1024x538.jpg`,

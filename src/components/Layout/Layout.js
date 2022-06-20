@@ -1,17 +1,24 @@
 import React from "react"
-import SideNavigation from "../SideNavigation/SideNavigation"
-import MobileNavigation from "../MobileNavigation/MobileNavigation"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
+import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
+import { Helmet } from "react-helmet"
+import { useCustomSettingsQuery } from "../../hooks/useCustomSettings"
 
 const Layout = ({ children }) => {
+  const { wpPage: settings } = useCustomSettingsQuery()
+  const faviconImage =
+    settings.customSettings.favicon.localFile.childImageSharp.gatsbyImageData
+      .images.fallback.src
   return (
     <>
-      <MobileNavigation />
-      <SideNavigation />
-      <div className="main">
-        {children}
-        <Footer />
-      </div>
+      <Helmet>
+        <link rel="icon" href={faviconImage} />
+      </Helmet>
+      <Header />
+      <div className="main">{children}</div>
+      <Footer />
     </>
   )
 }

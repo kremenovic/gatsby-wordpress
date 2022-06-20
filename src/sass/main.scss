@@ -4,17 +4,20 @@
 @import "./base/typography";
 @import "./base/animations";
 
-@import "./components/navigation";
-@import "./components/button";
-@import "./components/featuredPortfolio";
-@import "./components/slider";
+// @import "./components/navigation";
 
+@import "./layout/header";
 @import "./layout/body";
 @import "./layout/footer";
 
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+@import "~tailwindcss/utilities";
+
 :root {
-  // primary
-  --brightBlue: hsl(220, 98%, 61%);
+  --primaryColor: #212121;
+  --secondaryColor: #313131;
+  --linkColor: #bf9f5a;
 }
 
 html {
@@ -22,6 +25,9 @@ html {
 }
 
 body a {
-  color: #00bea3;
   text-decoration: none;
+}
+
+.activeLink {
+  color: var(--linkColor);
 }

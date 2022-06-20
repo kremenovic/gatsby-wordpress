@@ -1,9 +1,9 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const useMenuQuery = () => {
+export const useFooterQuery = () => {
   const data = useStaticQuery(graphql`
-    query navigationQuery {
-      wpMenu(databaseId: { eq: 33 }) {
+    query footerQuery {
+      wpMenu(databaseId: { eq: 88 }) {
         name
         menuItems {
           nodes {
@@ -11,6 +11,11 @@ export const useMenuQuery = () => {
             label
             url
           }
+        }
+      }
+      site {
+        siteMetadata {
+          title
         }
       }
     }

@@ -22,25 +22,14 @@ function SEO({ description, lang, meta, keywords, title, image }) {
             author
           }
         }
-        wpPage(databaseId: { eq: 10 }) {
-          seo {
-            opengraphImage {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData
-                }
-              }
-            }
-          }
-        }
       }
     `
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const imageData =
-    wpPage.seo.opengraphImage.localFile.childImageSharp.gatsbyImageData.images
-      .fallback.src
+  // const imageData =
+  //   wpPage.seo.opengraphImage.localFile.childImageSharp.gatsbyImageData.images
+  //     .fallback.src
 
   return (
     <Helmet
@@ -66,10 +55,10 @@ function SEO({ description, lang, meta, keywords, title, image }) {
           property: `og:type`,
           content: `website`,
         },
-        {
-          property: `og:image`,
-          content: imageData,
-        },
+        // {
+        //   property: `og:image`,
+        //   content: imageData,
+        // },
         {
           property: `og:image:width`,
           content: `1200`,
