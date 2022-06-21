@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Helmet>
-        <link rel="icon" href={faviconImage} />
+        <link rel="icon" href={faviconImage} type="image/png" />
       </Helmet>
       <Header />
       <div className="main">{children}</div>
