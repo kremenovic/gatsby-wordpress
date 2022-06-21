@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useCustomSettingsQuery = () => {
   const data = useStaticQuery(graphql`
     query customSettingsQuery {
-      wpPage(databaseId: { eq: 62 }) {
+      wpPage(title: { eq: "Custom Settings" }) {
         customSettings {
           aboutMeWidget
           disclaimer

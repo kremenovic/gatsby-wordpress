@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useFooterQuery = () => {
   const data = useStaticQuery(graphql`
     query footerQuery {
-      wpMenu(databaseId: { eq: 88 }) {
+      wpMenu(name: { eq: "Footer" }) {
         name
         menuItems {
           nodes {

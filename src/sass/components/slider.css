@@ -1,0 +1,107 @@
+.slider-container {
+  max-height: 500px;
+  height: 500px;
+  gap: 15px;
+}
+
+.slider-container .slide {
+  position: relative;
+}
+
+.slider-container .slide #overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #00000024;
+}
+
+.slider-container .slide-content {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider-container .slide-content p {
+  color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #00000024;
+  padding: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.slider-container .slider-rest-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.slider-container .slider-rest-col .slide {
+  height: 50%;
+}
+
+.slider-container .slider-rest-col .slide:first-child {
+  margin-bottom: 15px;
+}
+
+.navigation-slider .navigation-slider-prev,
+.navigation-slider .navigation-slider-next {
+  width: 34px;
+  height: 34px;
+  display: inline-block;
+  vertical-align: top;
+  background: #fff;
+  color: #010101;
+  font-size: 18px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  margin-top: -18px;
+  left: 20px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.navigation-slider .navigation-slider-prev:hover,
+.navigation-slider .navigation-slider-next:hover {
+  opacity: 1;
+}
+
+.navigation-slider .navigation-slider-prev svg,
+.navigation-slider .navigation-slider-next svg {
+  display: inline-block;
+}
+
+.navigation-slider .navigation-slider-next {
+  width: 34px;
+  height: 34px;
+  display: inline-block;
+  vertical-align: top;
+  background: #fff;
+  color: #010101;
+  font-size: 18px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  margin-top: -18px;
+  left: 20px;
+  text-align: center;
+  left: auto;
+  right: 20px;
+}
+/*# sourceMappingURL=slider.css.map */

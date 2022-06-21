@@ -1,5 +1,4 @@
 import React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"

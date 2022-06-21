@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useMenuQuery = () => {
   const data = useStaticQuery(graphql`
     query navigationQuery {
-      wpMenu(databaseId: { eq: 33 }) {
+      wpMenu(name: { eq: "Primary" }) {
         name
         menuItems {
           nodes {

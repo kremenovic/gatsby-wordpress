@@ -11,7 +11,7 @@ const Footer = () => {
   let currentDate = new Date().getFullYear()
 
   return (
-    <div className="header container max-w-full bg-primaryColor">
+    <div className="footer container max-w-full bg-primaryColor">
       <div className="container max-w-7xl  flex justify-between  text-white mx-auto py-10 px-5 lg:px-23 lg:flex-col ">
         <div className="navigation flex flex-col space-y-3 pb-8 lg:flex-col lg:text-left lg:space-x-0 lg:space-y-2 ">
           <h3 className="text-xl underline underline-offset-8 pb-3 font-medium lg:text-left">
