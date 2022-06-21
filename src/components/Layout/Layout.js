@@ -8,8 +8,8 @@ import { useCustomSettingsQuery } from "../../hooks/useCustomSettings"
 const Layout = ({ children }) => {
   const { wpPage: settings } = useCustomSettingsQuery()
   const faviconImage =
-    settings.customSettings.favicon.localFile.childImageSharp.gatsbyImageData
-      .images.fallback.src
+    settings?.customSettings?.favicon?.localFile?.childImageSharp
+      .gatsbyImageData.images.fallback.src
   return (
     <>
       <Helmet>
