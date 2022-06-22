@@ -1,7 +1,7 @@
 .slider-container {
   max-height: 500px;
   height: 500px;
-  gap: 15px;
+  gap: 0.75rem;
 
   .slide {
     position: relative;
@@ -39,7 +39,7 @@
       height: 50%;
 
       &:first-child {
-        margin-bottom: 15px;
+        margin-bottom: 0.75rem;
       }
     }
   }

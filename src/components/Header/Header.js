@@ -20,7 +20,7 @@ const Header = () => {
         <Link to="/">
           <GatsbyImage
             image={imageData}
-            alt="test"
+            alt="logo"
             className="lg:max-[150px] max-w-xs"
           />
         </Link>

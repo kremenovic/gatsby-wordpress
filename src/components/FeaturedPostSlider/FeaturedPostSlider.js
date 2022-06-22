@@ -61,11 +61,9 @@ const FeaturedPostSlider = () => {
     )
   )
 
-  console.log(allWpPost.nodes.length)
-
   return (
     <div className="slider container max-w-full bg-white">
-      <div className="container relative max-w-7xl  text-red-500 mx-auto py-5 px-5 lg:px-23">
+      <div className="container relative max-w-7xl mx-auto py-5 px-5 lg:px-23">
         {allWpPost.nodes.length === 6 && (
           <div className="navigation-slider">
             <div className="navigation-slider-prev" onClick={handlePrevSlide}>
@@ -81,7 +79,12 @@ const FeaturedPostSlider = () => {
             <Link to={firstSlides[0]?.uri} className="slide">
               <div id="overlay"></div>
 
-              <BackgroundImage Tag="div" {...bgImage} className="slide-content">
+              <BackgroundImage
+                Tag="div"
+                {...bgImage}
+                className="slide-content"
+                style={{ backgroundSize: "cover", backgroundPositionY: "0" }}
+              >
                 <p>{firstSlides[0]?.title}</p>
               </BackgroundImage>
             </Link>
@@ -93,6 +96,7 @@ const FeaturedPostSlider = () => {
                 Tag="div"
                 {...bgImage1}
                 className="slide-content"
+                style={{ backgroundSize: "cover", backgroundPositionY: "0" }}
               >
                 <p>{firstSlides[1]?.title}</p>
               </BackgroundImage>
@@ -111,6 +115,7 @@ const FeaturedPostSlider = () => {
                 Tag="div"
                 {...bgImage2}
                 className="slide-content"
+                style={{ backgroundSize: "cover", backgroundPositionY: "0" }}
               >
                 <p>{firstSlides[2]?.title}</p>
               </BackgroundImage>

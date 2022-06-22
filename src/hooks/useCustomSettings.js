@@ -24,6 +24,13 @@ export const useCustomSettingsQuery = () => {
               }
             }
           }
+          aboutMeImage {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+              }
+            }
+          }
         }
       }
     }

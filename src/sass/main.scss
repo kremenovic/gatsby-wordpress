@@ -35,3 +35,16 @@ body a {
 .displayNone {
   display: none;
 }
+
+.arrow-down::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--primaryColor);
+  clear: both;
+}
