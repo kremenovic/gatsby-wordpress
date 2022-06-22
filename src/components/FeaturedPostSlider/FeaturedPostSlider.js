@@ -10,19 +10,30 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa"
 const FeaturedPostSlider = () => {
   const { allWpPost } = useFeaturedPostsQuery()
   const [firstSlides, setFirstSlides] = useState([])
+  const [lastSlides, setLastSlides] = useState([])
+
+  const [slide, setSlide] = useState(0) // used for infinite slide effect
 
   const handleGetFirstSlides = () => {
-    let a = allWpPost.nodes.slice(0, 3)
-    setFirstSlides(a)
+    let newArr = allWpPost.nodes.slice(0, 3)
+    setFirstSlides(newArr)
+    setSlide(0)
   }
 
   const handleNextSlide = () => {
-    let a = allWpPost.nodes.slice(3, 6)
-    setFirstSlides(a)
+    let newArr = allWpPost.nodes.slice(3, 6)
+    setFirstSlides(newArr)
+    setSlide(1)
+    if (slide === 1) {
+      handleGetFirstSlides()
+    }
   }
 
   const handlePrevSlide = () => {
     handleGetFirstSlides()
+    if (slide === 0) {
+      handleNextSlide()
+    }
   }
 
   useEffect(() => {
@@ -49,19 +60,24 @@ const FeaturedPostSlider = () => {
         .gatsbyImageData
     )
   )
+
+  console.log(allWpPost.nodes.length)
+
   return (
     <div className="slider container max-w-full bg-white">
-      <div className="container relative max-w-7xl  text-red-500 mx-auto py-5 px-5 lg:pr-10 lg:px-23">
-        <div className="navigation-slider ">
-          <div className="navigation-slider-prev" onClick={handlePrevSlide}>
-            <FaAngleLeft />
+      <div className="container relative max-w-7xl  text-red-500 mx-auto py-5 px-5 lg:px-23">
+        {allWpPost.nodes.length === 6 && (
+          <div className="navigation-slider">
+            <div className="navigation-slider-prev" onClick={handlePrevSlide}>
+              <FaAngleLeft />
+            </div>
+            <div className="navigation-slider-next" onClick={handleNextSlide}>
+              <FaAngleRight />
+            </div>
           </div>
-          <div className="navigation-slider-next" onClick={handleNextSlide}>
-            <FaAngleRight />
-          </div>
-        </div>
-        <div className="slider-container grid grid-cols-3">
-          <div className="slider-1-col col-span-2 ...">
+        )}
+        <div className="slider-container grid grid-cols-3 lg:grid-cols-2">
+          <div className="slider-1-col col-span-2 ... lg:col-span-3 ...">
             <Link to={firstSlides[0]?.uri} className="slide">
               <div id="overlay"></div>
 
@@ -70,7 +86,7 @@ const FeaturedPostSlider = () => {
               </BackgroundImage>
             </Link>
           </div>
-          <div className="slider-rest-col ...">
+          <div className="slider-rest-col ... lg:col-span-2">
             <Link to={firstSlides[1]?.uri} className="slide">
               <div id="overlay"></div>
               <BackgroundImage
