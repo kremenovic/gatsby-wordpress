@@ -3,6 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import { useCustomSettingsQuery } from "../../hooks/useCustomSettings"
 import SectionTitle from "../SectionTitle/SectionTitle"
+import WidgetPosts from "./WidgetPosts"
 
 const Sidebar = () => {
   const { wpPage: settings } = useCustomSettingsQuery()
@@ -32,6 +33,7 @@ const Sidebar = () => {
 
       <div className="widget text-primaryColor text-center mb-5">
         <SectionTitle>Recent Posts</SectionTitle>
+        <WidgetPosts />
       </div>
       <div className="widget text-primaryColor text-center mb-5">
         <SectionTitle>Disclaimer</SectionTitle>

@@ -1,5 +1,5 @@
 import React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { convertToBgImage } from "gbimage-bridge"
@@ -20,8 +20,6 @@ const PostItems = ({ data }) => {
         } = item
         const imageData = getImage(childImageSharp.gatsbyImageData)
         const bgImage = convertToBgImage(imageData)
-
-        console.log(excerpt)
 
         return (
           <article className="post-item" key={index}>
