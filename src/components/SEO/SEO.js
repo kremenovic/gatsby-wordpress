@@ -37,7 +37,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s - ${site.siteMetadata.title}`}
+      // titleTemplate={`%s - ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -55,10 +55,10 @@ function SEO({ description, lang, meta, keywords, title, image }) {
           property: `og:type`,
           content: `website`,
         },
-        // {
-        //   property: `og:image`,
-        //   content: imageData,
-        // },
+        {
+          property: `og:image`,
+          content: metaDescription,
+        },
         {
           property: `og:image:width`,
           content: `1200`,
@@ -73,7 +73,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: "Admin",
         },
         {
           name: `twitter:title`,
