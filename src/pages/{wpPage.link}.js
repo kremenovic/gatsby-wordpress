@@ -51,7 +51,7 @@ export default PageTemplate
 
 export const pageQuery = graphql`
   query SinglePageQuery($id: String!) {
-    wpPage(id: { eq: $id }, link: {nin: '/custom-settings'}) {
+    wpPage(id: { eq: $id }, link: { nin: "/custom-settings" }) {
       link
       title
       id
