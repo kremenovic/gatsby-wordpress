@@ -62,6 +62,10 @@ There are some built in features, and those are:
 - Post Settings - You may select which post is going to be featured (visible on the slider)
 - Pros/Cons plugin styled for Gatsby
 
+4. Step:
+
+If you are using your own hosting instead of Netlify, after every change you make on the WordPress side you need to run <strong>gatsby build </strong>and to upload to your hosting everything from <strong>public</strong> folder.
+
 <h3>Run this project on localhost:</h3>
 
 - npm install
