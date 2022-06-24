@@ -38,7 +38,7 @@ const FeaturedPostSlider = () => {
 
   useEffect(() => {
     handleGetFirstSlides()
-  }, [])
+  }, [setFirstSlides])
 
   const bgImage = convertToBgImage(
     getImage(

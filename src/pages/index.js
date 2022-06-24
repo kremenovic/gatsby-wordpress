@@ -8,7 +8,6 @@ import SectionTitle from "../components/SectionTitle/SectionTitle"
 import LatestPosts from "../components/LatestPosts/LatestPosts"
 const IndexPage = ({ data }) => (
   <Layout>
-    {console.log(data)}
     <Seo
       title={data.wpPage.seo.opengraphTitle}
       description={data.wpPage.seo.metaDesc}
