@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import Seo from "../components/SEO/SEO"
 import Container from "../components/Container/Container"
-import SectionTitle from "../components/SectionTitle/SectionTitle"
 
 const PageTemplate = ({ data }) => {
   const {
@@ -29,7 +28,10 @@ const PageTemplate = ({ data }) => {
   return (
     <Layout>
       <Seo title={metaTitle} description={metaDesc} />
-      <meta property="og:image" content={graphImage} />
+      <meta
+        property="og:image"
+        content={graphImage ? graphImage : "featured image is not added"}
+      />
       <meta property="og:type" content="page" />
       <meta property="og:url" content={link} />
       <Container>

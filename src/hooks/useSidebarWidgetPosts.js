@@ -17,6 +17,12 @@ export const useSidebarWidgetPostsQuery = () => {
             }
           }
           excerpt
+          categories {
+            nodes {
+              link
+              name
+            }
+          }
         }
       }
     }

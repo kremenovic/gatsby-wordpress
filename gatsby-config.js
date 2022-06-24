@@ -7,7 +7,6 @@ module.exports = {
     title: `MyTechWorld`,
     description: `MyTechWorld is a sample website of a free Gatsby WordPress theme.`,
     author: `Stefan Kremenovic`,
-    siteUrl: `https://kremenovic.com/`,
     image: `${__dirname}/src/images/sharing-1024x538.jpg`,
   },
   plugins: [

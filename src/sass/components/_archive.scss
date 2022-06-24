@@ -1,0 +1,29 @@
+.category-posts {
+  .post-item {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--linkColor);
+    .item-image {
+      height: 500px;
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .category-posts {
+    .post-item {
+      .item-image {
+        height: 335px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .category-posts {
+    .post-item {
+      .item-image {
+        height: 260px;
+      }
+    }
+  }
+}

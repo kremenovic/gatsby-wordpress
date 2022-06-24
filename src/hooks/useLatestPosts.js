@@ -22,6 +22,12 @@ export const useLatestPostsQuery = () => {
             }
           }
           excerpt
+          categories {
+            nodes {
+              link
+              name
+            }
+          }
         }
       }
     }
