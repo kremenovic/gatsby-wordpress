@@ -26,11 +26,11 @@ Before we proceed with installing this, we will need hosting and domain with a s
 
 <h4>These are the steps:</h4>
 
-1. Step 1:
+1. Step:
 
 Download <a href="https://www.mediafire.com/file/wjfmc6qc4vw0mmw/WordPress.zip/file">WordPress</a> copy and import on your hosting. It is important that you use this one since there are some custtom fields I created as a settings for like slider etc...
 
-2. Step 2:
+2. Step:
 
 - Download this github project, and in <strong>gatsby-config.js</strong> change <strong>siteUrl</strong>. Here goes the link of your Gatsby domain. Also update <strong>title & description</strong>.
 
@@ -39,7 +39,7 @@ Download <a href="https://www.mediafire.com/file/wjfmc6qc4vw0mmw/WordPress.zip/f
 <strong>WP_URL = https://YourWordPressDomain.com/graphql</strong>
 <strong>GA_TRACKING = Your Google Tracking Code For GA<strong>
 
-3. Step 3:
+3. Step:
 
 - Update <strong>Custom Settings</strong> page on WordPress.
 - If you go to /utils/utils.js you may change <strong>itemsPerPage</strong> and that will control how many posts are going to be displayed on a category page before showing the pagination. Default value is 3.
@@ -62,7 +62,7 @@ There are some built in features, and those are:
 - Post Settings - You may select which post is going to be featured (visible on the slider)
 - Pros/Cons plugin styled for Gatsby
 
-<h3>Run this project on localhost</h3>
+<h3>Run this project on localhost:</h3>
 
 - npm install
 - gatsby develop
