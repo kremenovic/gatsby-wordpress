@@ -69,7 +69,12 @@ export const postQuery = graphql`
           node {
             localFile {
               childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+                gatsbyImageData(
+                  width: 850
+                  layout: CONSTRAINED
+                  placeholder: DOMINANT_COLOR
+                  formats: [AUTO, WEBP, AVIF]
+                )
               }
             }
           }

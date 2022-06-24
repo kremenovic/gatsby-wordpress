@@ -13,21 +13,36 @@ export const useCustomSettingsQuery = () => {
           logo {
             localFile {
               childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+                gatsbyImageData(
+                  width: 500
+                  layout: CONSTRAINED
+                  placeholder: DOMINANT_COLOR
+                  formats: [AUTO, WEBP, AVIF]
+                )
               }
             }
           }
           favicon {
             localFile {
               childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+                gatsbyImageData(
+                  width: 500
+                  layout: CONSTRAINED
+                  placeholder: DOMINANT_COLOR
+                  formats: [AUTO, WEBP, AVIF]
+                )
               }
             }
           }
           aboutMeImage {
             localFile {
               childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+                gatsbyImageData(
+                  width: 500
+                  layout: CONSTRAINED
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
               }
             }
           }

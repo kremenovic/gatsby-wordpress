@@ -16,7 +16,12 @@ export const useLatestPostsQuery = () => {
             node {
               localFile {
                 childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+                  gatsbyImageData(
+                    width: 500
+                    layout: CONSTRAINED
+                    placeholder: DOMINANT_COLOR
+                    formats: [AUTO, WEBP, AVIF]
+                  )
                 }
               }
             }
