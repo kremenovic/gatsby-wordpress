@@ -19,7 +19,7 @@ export const useLatestPostsQuery = () => {
                   gatsbyImageData(
                     width: 500
                     layout: CONSTRAINED
-                    placeholder: DOMINANT_COLOR
+                    placeholder: TRACED_SVG
                     formats: [AUTO, WEBP, AVIF]
                   )
                 }

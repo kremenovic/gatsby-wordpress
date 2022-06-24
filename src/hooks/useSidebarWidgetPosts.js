@@ -14,7 +14,7 @@ export const useSidebarWidgetPostsQuery = () => {
                   gatsbyImageData(
                     width: 150
                     layout: CONSTRAINED
-                    placeholder: DOMINANT_COLOR
+                    placeholder: TRACED_SVG
                     formats: [AUTO, WEBP, AVIF]
                   )
                 }

@@ -72,7 +72,7 @@ export const postQuery = graphql`
                 gatsbyImageData(
                   width: 850
                   layout: CONSTRAINED
-                  placeholder: DOMINANT_COLOR
+                  placeholder: TRACED_SVG
                   formats: [AUTO, WEBP, AVIF]
                 )
               }
