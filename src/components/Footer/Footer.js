@@ -1,53 +1,59 @@
 import React from "react"
 
-import { FaFacebookF } from "react-icons/fa"
-import { FaLinkedinIn } from "react-icons/fa"
-import { FaInstagram } from "react-icons/fa"
-import { FaGithub } from "react-icons/fa"
+import { useFooterQuery } from "../../hooks/useFooterQuery"
+import { useCustomSettingsQuery } from "../../hooks/useCustomSettings"
+import NavigationItems from "../NavigationItems/NavigationItems"
+import Socials from "../Socials/Socials"
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()
+  const { wpMenu, site } = useFooterQuery()
+  const { wpPage: settings } = useCustomSettingsQuery()
+  let currentDate = new Date().getFullYear()
 
   return (
-    <footer>
-      <p>
-        &copy; Copyright {currentYear} Stefan Kremenovic. All Rights Reserved.
-      </p>
-      <div className="socials">
-        <a
-          href="https://www.facebook.com/kremenovic.stefan"
-          rel="noreferrer"
-          title="Facebook"
-          target="_blank"
-        >
-          <FaFacebookF />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/stefan-kremenovic-8b832b15b/"
-          rel="noreferrer"
-          title="Linkedin"
-          target="_blank"
-        >
-          <FaLinkedinIn />
-        </a>
-        <a
-          href="https://instagram.com/stefan_kremenovic/"
-          rel="noreferrer"
-          title="Instagram"
-          target="_blank"
-        >
-          <FaInstagram />
-        </a>
-        <a
-          href="https://github.com/kremenovic"
-          target="_blank"
-          rel="noreferrer"
-          title="Github"
-        >
-          <FaGithub />
-        </a>
+    <div className="footer container max-w-full bg-primaryColor">
+      <div className="container max-w-7xl  flex justify-between  text-white mx-auto py-10 px-5 lg:px-23 lg:flex-col ">
+        <div className="navigation flex flex-col space-y-3 pb-8 lg:flex-col lg:text-left lg:space-x-0 lg:space-y-2 ">
+          <h3 className="text-xl underline underline-offset-8 pb-3 font-medium lg:text-left">
+            About
+          </h3>
+          <div
+            className="max-w-sm lg:text-left"
+            dangerouslySetInnerHTML={{
+              __html: settings.customSettings.aboutMeWidget,
+            }}
+          ></div>
+        </div>
+
+        <div className="navigation flex flex-col space-y-3 pb-8 lg:flex-col lg:text-left lg:space-x-0 lg:space-y-2 ">
+          <h3 className="text-xl underline underline-offset-8 pb-3 font-medium lg:text-left">
+            Quick Links
+          </h3>
+          <NavigationItems menu={wpMenu.menuItems.nodes} />
+        </div>
+
+        <div className="navigation flex flex-col space-y-3 pb-8 lg:flex-col lg:text-left lg:space-x-0 lg:space-y-2">
+          <h3 className="text-xl underline underline-offset-8 pb-3 font-medium">
+            Socials
+          </h3>
+          <Socials />
+        </div>
+        <div className="navigation flex flex-col space-y-3 pb-8 lg:flex-col lg:text-left lg:space-x-0 lg:space-y-2">
+          <h3 className="text-xl underline underline-offset-8 pb-3 font-medium">
+            Disclaimer
+          </h3>
+          <div
+            className="max-w-sm"
+            dangerouslySetInnerHTML={{
+              __html: settings.customSettings.disclaimer,
+            }}
+          ></div>
+        </div>
       </div>
-    </footer>
+      <p className="text-white text-center text-sm py-3 bg-secondaryColor">
+        @{currentDate} - {site.siteMetadata.title} - All Right Reserved.
+      </p>
+    </div>
   )
 }
 

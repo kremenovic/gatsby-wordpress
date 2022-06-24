@@ -1,11 +1,14 @@
 {
-  "name": "kremenovic-wp",
+  "name": "gatsby-wordpress",
   "private": true,
-  "description": "Gatsby WordPress site for kremenovic.com",
+  "description": "Gatsby WordPress theme",
   "version": "0.1.0",
   "author": "Stefan Kremenovic <stefan@kremenovic.com>",
   "dependencies": {
-    "gatsby": "^4.12.1",
+    "@headlessui/react": "^1.6.4",
+    "@heroicons/react": "^1.0.6",
+    "gatsby": "^4.16.0",
+    "gatsby-background-image": "^1.6.0",
     "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-gatsby-cloud": "^4.12.1",
     "gatsby-plugin-google-analytics": "^4.12.1",
@@ -13,6 +16,8 @@
     "gatsby-plugin-image": "^2.12.1",
     "gatsby-plugin-manifest": "^4.12.1",
     "gatsby-plugin-offline": "^5.12.1",
+    "gatsby-plugin-preact": "^6.17.0",
+    "gatsby-plugin-preload-fonts": "^3.17.0",
     "gatsby-plugin-react-helmet": "^5.12.1",
     "gatsby-plugin-sass": "^5.12.1",
     "gatsby-plugin-sharp": "^4.12.1",
@@ -20,6 +25,9 @@
     "gatsby-source-filesystem": "^4.12.1",
     "gatsby-source-wordpress": "^6.12.1",
     "gatsby-transformer-sharp": "^4.12.1",
+    "gbimage-bridge": "^0.2.1",
+    "preact": "^10.8.2",
+    "preact-render-to-string": "^5.2.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -28,20 +36,25 @@
     "sass": "^1.50.0"
   },
   "devDependencies": {
-    "prettier": "^2.6.2"
+    "autoprefixer": "^10.4.7",
+    "postcss-cli": "^9.1.0",
+    "prettier": "^2.6.2",
+    "tailwindcss": "^3.1.3"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "0BSD",
   "scripts": {
+    "preload-fonts": "gatsby-preload-fonts",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
+    "start": "gatsby develop build:css",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "build:css": "postcss src/sass/tailwind.scss -o src/sass/main.scss "
   },
   "repository": {
     "type": "git",

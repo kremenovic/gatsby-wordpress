@@ -4,14 +4,15 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Stefan Kremenovic`,
-    description: `Hi, my name is Stefan Kremenović from Banja Luka, Republic of Srpska / Bosnia and Herzegovina. My profession is Web Design and SEO.`,
+    title: `MyTechWorld`,
+    description: `MyTechWorld is a sample website of a free Gatsby WordPress theme.`,
     author: `Stefan Kremenovic`,
-    siteUrl: `https://kremenovic.com/`,
+    siteUrl: `https://merry-quokka-81823a.netlify.app`,
     image: `${__dirname}/src/images/sharing-1024x538.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-preact`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -21,6 +22,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -37,6 +39,7 @@ module.exports = {
         theme_color: `#232A34`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        include_favicon: false, // This will exclude favicon link tag
       },
     },
     {

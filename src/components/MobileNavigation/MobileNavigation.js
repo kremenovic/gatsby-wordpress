@@ -1,36 +1,11 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
+import React from "react"
 import { useMenuQuery } from "../../hooks/useMenuQuery"
-import Navigation from "../Navigation/Navigation"
-import { StaticImage } from "gatsby-plugin-image"
-import { FaBars } from "react-icons/fa"
+import NavigationItems from "../NavigationItems/NavigationItems"
 
 const MobileNavigation = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const { site, wpMenu: menu } = useMenuQuery()
+  const { wpMenu } = useMenuQuery()
 
-  return (
-    <div className="mobileNavigation">
-      <div className="mobileNavigation-items">
-        <Link to="/">
-          <StaticImage
-            src="../../images/logo.png"
-            alt={site.siteMetadata.title}
-            placeholder="tracedSVG"
-            layout="constrained"
-          />
-        </Link>
-        <FaBars onClick={() => setMenuOpen(!menuOpen)} />
-      </div>
-      <nav id="mainMenu" className={menuOpen ? "activeMobileMenu" : null}>
-        <Navigation
-          menu={menu.menuItems.nodes}
-          setMenuOpen={setMenuOpen}
-          menuOpen={menuOpen}
-        />
-      </nav>
-    </div>
-  )
+  return <NavigationItems menu={wpMenu.menuItems.nodes} />
 }
 
 export default MobileNavigation

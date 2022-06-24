@@ -1,0 +1,30 @@
+.widget-posts {
+  .post-item {
+    grid-template-columns: 30% 70%;
+    display: grid;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--linkColor);
+    padding-bottom: 15px;
+
+    .item-image {
+      height: 6rem;
+    }
+
+    .item-header {
+      .category,
+      .item-content,
+      .readMore {
+        display: none;
+      }
+
+      .title {
+        text-align: left;
+        margin-left: 10px;
+        a {
+          font-size: 14px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+}
