@@ -36,8 +36,8 @@ Download <a href="https://www.mediafire.com/file/wjfmc6qc4vw0mmw/WordPress.zip/f
 
 - After that create two files: <strong>.env.development & .env.production</strong>. There you will create:
 
-<strong>WP_URL = https://YourWordPressDomain.com/graphql</strong>
-<strong>GA_TRACKING = Your Google Tracking Code For GA<strong>
+- <strong>WP_URL = https://YourWordPressDomain.com/graphql</strong>
+- <strong>GA_TRACKING = Your Google Tracking Code For GA<strong>
 
 3. Step:
 
