@@ -50,8 +50,6 @@ If you would like to run this project on your local host run <strong>gatsby deve
 
 ## Note: Please Do Not Change Permalink For This Page!
 
-4. Step:
-
 <h3>WordPress Features</h3>
 
 There are some built in features, and those are:
