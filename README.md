@@ -39,12 +39,18 @@ Download <a href="https://www.mediafire.com/file/wjfmc6qc4vw0mmw/WordPress.zip/f
 - <strong>WP_URL = https://YourWordPressDomain.com/graphql</strong>
 - <strong>GA_TRACKING = Your Google Tracking Code For GA<strong>
 
+Run <strong>npm install</strong> and after that <strong>gatsby build</strong> so you can build <strong>public</strong> folder with all generated files that you will upload on your hosting.
+
+If you would like to run this project on your local host run <strong>gatsby develop</strong>.
+
 3. Step:
 
 - Update <strong>Custom Settings</strong> page on WordPress.
 - If you go to /utils/utils.js you may change <strong>itemsPerPage</strong> and that will control how many posts are going to be displayed on a category page before showing the pagination. Default value is 3.
 
 ## Note: Please Do Not Change Permalink For This Page!
+
+4. Step:
 
 <h3>WordPress Features</h3>
 
@@ -61,6 +67,10 @@ There are some built in features, and those are:
 - Update Meta Title and Meta Description - This one is used for a homepage (index.js)
 - Post Settings - You may select which post is going to be featured (visible on the slider)
 - Pros/Cons plugin styled for Gatsby
+
+4. Step:
+
+If you are using your own hosting instead of Netlify, after every change you make on the WordPress side you need to run <strong>gatsby build </strong>and to upload to your hosting everything from <strong>public</strong> folder.
 
 <h3>Run this project on localhost:</h3>
 
