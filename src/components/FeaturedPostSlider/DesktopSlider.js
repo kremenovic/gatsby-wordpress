@@ -67,7 +67,7 @@ const DesktopSlider = ({ allWpPost }) => {
           </div>
         </div>
       )}
-      <div className="slider-container grid grid-cols-3 lg:grid-cols-2">
+      <div className="desktop slider-container grid grid-cols-3 lg:grid-cols-2">
         <div className="slider-1-col col-span-2 ... lg:col-span-3 ...">
           <a href={firstSlides[0]?.uri} className="slide">
             <div id="overlay"></div>

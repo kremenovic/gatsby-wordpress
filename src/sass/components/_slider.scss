@@ -107,6 +107,9 @@
     &.mobile {
       height: 350px;
     }
+    &.desktop {
+      display: none;
+    }
     .slider-1-col {
       margin-bottom: 15px;
     }
