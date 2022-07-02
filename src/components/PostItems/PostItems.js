@@ -1,6 +1,5 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { getImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { convertToBgImage } from "gbimage-bridge"
 
