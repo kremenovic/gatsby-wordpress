@@ -31,6 +31,10 @@ const MobileSlider = ({ allWpPost }) => {
     })
   }
 
+  console.log(
+    allWpPost.nodes[slide]?.featuredImage.node.localFile.childImageSharp
+  )
+
   const bgImage = convertToBgImage(
     getImage(
       allWpPost.nodes[slide]?.featuredImage.node.localFile.childImageSharp
@@ -64,9 +68,8 @@ const MobileSlider = ({ allWpPost }) => {
               {...bgImage}
               className="slide-content"
               style={{
-                backgroundSize: "contain",
-                backgroundPositionY: "0",
-                backgroundRepeat: "repeat",
+                backgroundSize: "cover",
+                backgroundPositionY: "95",
               }}
             >
               <p>{allWpPost.nodes[slide]?.title}</p>

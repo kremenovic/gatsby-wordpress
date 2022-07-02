@@ -104,6 +104,9 @@
     max-height: 750px;
     height: 750px;
     gap: 0px;
+    &.mobile {
+      height: 450px;
+    }
     .slider-1-col {
       margin-bottom: 15px;
     }
