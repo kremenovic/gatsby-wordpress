@@ -1,6 +1,5 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { getImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { convertToBgImage } from "gbimage-bridge"
 
@@ -30,31 +29,31 @@ const PostItems = ({ data, archiveData }) => {
         return (
           <article className="post-item" key={index}>
             <div className="item-image h-64 w-full">
-              <Link to={uri} className="hover:cursor-pointer">
+              <a href={uri} className="hover:cursor-pointer">
                 <BackgroundImage
                   Tag="div"
                   {...bgImage}
                   className="h-full w-full object-cover"
                   style={{ backgroundSize: "cover", backgroundPositionY: "0" }}
                 ></BackgroundImage>
-              </Link>
+              </a>
             </div>
             <div className="item-header">
               <div className="category py-3">
-                <Link
-                  to={categories?.nodes[0]?.link}
+                <a
+                  href={categories?.nodes[0]?.link}
                   className=" text-linkColor text-sm"
                 >
                   {categories?.nodes[0].name}
-                </Link>
+                </a>
               </div>
               <div className="title mb-3">
-                <Link
-                  to={uri}
+                <a
+                  href={uri}
                   className="text-secondaryColor text-lg font-bold capitalize hover:text-linkColor hover:cursor-pointer"
                 >
                   {title}
-                </Link>
+                </a>
               </div>
 
               <div
@@ -64,7 +63,7 @@ const PostItems = ({ data, archiveData }) => {
                 }}
               ></div>
               <div className="readMore text-linkColor mt-3 pb-3">
-                <Link to={uri}>Read More...</Link>
+                <a href={uri}>Read More...</a>
               </div>
             </div>
           </article>

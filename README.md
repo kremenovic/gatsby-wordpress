@@ -50,8 +50,6 @@ If you would like to run this project on your local host run <strong>gatsby deve
 
 ## Note: Please Do Not Change Permalink For This Page!
 
-4. Step:
-
 <h3>WordPress Features</h3>
 
 There are some built in features, and those are:
@@ -67,8 +65,6 @@ There are some built in features, and those are:
 - Update Meta Title and Meta Description - This one is used for a homepage (index.js)
 - Post Settings - You may select which post is going to be featured (visible on the slider)
 - Pros/Cons plugin styled for Gatsby
-
-4. Step:
 
 If you are using your own hosting instead of Netlify, after every change you make on the WordPress side you need to run <strong>gatsby build </strong>and to upload to your hosting everything from <strong>public</strong> folder.
 

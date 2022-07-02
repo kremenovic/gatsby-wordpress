@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 const NavigationItems = ({ menu, menuOpen, setMenuOpen }) => {
   const handleCloseNavigation = () => {
@@ -11,15 +10,15 @@ const NavigationItems = ({ menu, menuOpen, setMenuOpen }) => {
     <>
       {menu.map(item => {
         return (
-          <Link
+          <a
             key={item.id}
-            to={item.url}
+            href={item.url}
             activeClassName="activeLink"
             onClick={handleCloseNavigation}
             className="hover:text-linkColor"
           >
             {item.label}
-          </Link>
+          </a>
         )
       })}
     </>
