@@ -1,3 +1,7 @@
+.mobile-container {
+  display: none;
+}
+
 .slider-container {
   max-height: 500px;
   height: 500px;
@@ -100,6 +104,12 @@
 }
 
 @media only screen and (max-width: 976px) {
+  .desktop-container {
+    display: none;
+  }
+  .mobile-container {
+    display: block;
+  }
   .slider-container {
     max-height: 750px;
     height: 750px;
@@ -107,9 +117,7 @@
     &.mobile {
       height: 350px;
     }
-    &.desktop {
-      display: none;
-    }
+
     .slider-1-col {
       margin-bottom: 15px;
     }

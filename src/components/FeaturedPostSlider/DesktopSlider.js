@@ -56,7 +56,7 @@ const DesktopSlider = ({ allWpPost }) => {
   )
 
   return (
-    <div className="container relative max-w-7xl mx-auto py-5 px-5 lg:px-23">
+    <div className="desktop-container container relative max-w-7xl mx-auto py-5 px-5 lg:px-23">
       {allWpPost.nodes.length === 6 && (
         <div className="navigation-slider">
           <div className="navigation-slider-prev" onClick={handlePrevSlide}>
@@ -67,7 +67,7 @@ const DesktopSlider = ({ allWpPost }) => {
           </div>
         </div>
       )}
-      <div className="desktop slider-container grid grid-cols-3 lg:grid-cols-2">
+      <div className="slider-container grid grid-cols-3 lg:grid-cols-2">
         <div className="slider-1-col col-span-2 ... lg:col-span-3 ...">
           <a href={firstSlides[0]?.uri} className="slide">
             <div id="overlay"></div>

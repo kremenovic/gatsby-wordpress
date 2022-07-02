@@ -42,7 +42,7 @@ const MobileSlider = ({ allWpPost }) => {
     )
   )
   return (
-    <div className="container relative max-w-7xl mx-auto py-5 px-5 lg:px-23">
+    <div className="mobile-container container relative max-w-7xl mx-auto py-5 px-5 lg:px-23">
       {allWpPost.nodes.length === 6 && (
         <div className="navigation-slider">
           <div
