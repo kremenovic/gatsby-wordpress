@@ -10,7 +10,6 @@ const PageTemplate = ({ data }) => {
     wpPage: {
       content,
       link,
-      id,
       title,
       seo: {
         metaDesc,

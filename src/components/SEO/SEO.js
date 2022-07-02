@@ -9,10 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-function SEO({ description, lang, meta, keywords, title, image }) {
-  const { site, wpPage } = useStaticQuery(
+function SEO({ description, lang, meta, keywords, title }) {
+  const { site } = useStaticQuery(
     graphql`
       query {
         site {
